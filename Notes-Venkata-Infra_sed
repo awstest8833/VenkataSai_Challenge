@@ -1,0 +1,18 @@
+
+SED Challenge Infrastructure
+
+
+Create and deploy a running instance of a web server using a configuration management
+tool of your choice
+
+* Created VPC with cidr range 172.31.0.0/16
+* created subnet1a (172.31.1.0/24) and subnet 1b (172.31.3.0/24)
+* Created Internet gateway and route table and linked with VPC
+* Created ec2 instances one in subnet 1a and another in subnet 1b  with port 22 opened to my ip only and port 8080 in inbound rules
+* Configured github to my local repo, enabled ssh keys
+* Connected to ec2 instances from gitbash
+* Installed ansible/httpd/ via ansible script in repo and deployed html page
+* Created  classic load balancer and configured port 80 at listner and port 8080 as back end
+* redirection from  HTTP---HTTPS using SECURITY GROUPS
+* Resolve to both Instances in Zone 1A AND ZONE 1B inorder to achieve high availability and avoid single point of failure
+* access lb public DNS for http://helloclasslicelb-458091818.us-east-1.elb.amazonaws.com/ for page
