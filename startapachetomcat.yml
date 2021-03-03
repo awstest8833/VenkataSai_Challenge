@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  gather_facts: no
+  tasks:
+  - name: Start Tomcat
+    command: nohup /home/ansible/tomcat/bin/startup.sh 
+    become: true
+    become_user: tomcat2
